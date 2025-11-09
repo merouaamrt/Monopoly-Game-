@@ -1,0 +1,173 @@
+@import url('https://fonts.googleapis.com/css2?family=Londrina+Shadow&family=Silkscreen&display=swap'); /*font-family: 'Silkscreen', cursive;*/
+@import url('https://fonts.googleapis.com/css2?family=Abel&family=Londrina+Shadow&family=Silkscreen&display=swap'); /*font-family: 'Abel', sans-serif;*/
+
+
+h1, h2{
+
+    font-family: 'Silkscreen', cursive;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    padding: 0px;
+
+    background-color: rgba(5, 97, 3, 0.8);
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+
+    }
+
+header {
+    color: #ffffff;
+    text-align: center;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: large;
+    padding: 0px;
+}
+
+h1 {
+    margin: 25px;
+}
+
+#sources {
+    display: flex;
+    flex-wrap:wrap; 
+    justify-content: space-between; 
+    width: 95%; 
+    margin-top: 00px; 
+    margin-bottom: 10px;
+    margin-left: 0px;
+}
+
+.source {
+    border: 1px solid #07a391dc;
+    padding: 10px;
+    cursor:alias;
+    width: 50%; 
+    max-width: 500px; 
+    margin-bottom: 20px; 
+}
+
+.source:nth-child(1),
+.source:nth-child(2) {
+    align-self: flex-start; 
+    margin-top: 100px;
+}
+
+.source:nth-last-child(1),
+.source:nth-last-child(2) {
+    align-self: flex-end; 
+}
+
+.source a {
+    color: #10f7e491;
+    text-decoration: none;
+    font-weight: bold;
+    margin-left: 50px;
+}
+
+.question {
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #212121; 
+    text-decoration: underline;
+}
+
+.answer {
+    margin-bottom: 10px;
+    color: #f8fdfdbc; 
+}
+
+
+.image1 {
+    position: absolute;
+    right: 510px;
+    top: 230px;
+    width: 40px;
+    height: 40px;
+}
+
+.image6 {
+    position: absolute;
+    top: 1%;
+    left: 10px;
+    width: 130px;
+    height: 120px;
+
+}
+
+.image14 {
+    position: absolute;
+    right: 570px;
+    top: 1000px;
+    width: 280px;
+    height: 290px;
+}
+
+.image9 {
+    position: absolute;
+    right: 1px;
+    top: 100px;
+    width: 150px;
+    height: 160px;
+}
+
+.image8 {
+    position: absolute;
+    left: 76px;
+    top: 230px;
+    width: 40px;
+    height: 40px;
+}
+.image111 {
+    position: absolute;
+    left: 76px;
+    top: 1230px;
+    width: 40px;
+    height: 40px;
+}
+.image112{
+    position: absolute;
+    right : 510px;
+    top: 1180px;
+    width: 40px;
+    height: 40px;
+}
+.image2{
+    position: absolute;
+    right : 30px;
+    top: 1100px;
+    width: 110px;
+    height: 100px;
+}
+
+body::before {
+    content: "";
+    background: url(lala.jpeg);
+    background-size: cover;
+    position:fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    opacity: 0.4; 
+}
+#retour {
+    position: absolute;
+    top: 20px;
+    right: 10px;
+    padding: 10px 20px;
+    background-color: #ffffff;
+    color: #0adec5b5;
+    border-radius: 5px;
+    cursor: pointer;
+    z-index: 1000;
+}
+
+#retour:hover {
+    background-color: #065b4c;
+}

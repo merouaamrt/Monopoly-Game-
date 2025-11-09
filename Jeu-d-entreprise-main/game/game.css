@@ -1,0 +1,195 @@
+@import url('https://fonts.googleapis.com/css2?family=Londrina+Shadow&family=Silkscreen&display=swap'); /*font-family: 'Silkscreen', cursive;*/
+@import url('https://fonts.googleapis.com/css2?family=Abel&family=Londrina+Shadow&family=Silkscreen&display=swap'); /*font-family: 'Abel', sans-serif;*/
+
+.header, .container, #message, #final-score{
+    font-family: 'Silkscreen', cursive;
+}
+
+body {
+    background-image: url('back.jpg'); 
+    background-size: cover;
+    background-position: center; 
+    background-repeat: no-repeat;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    margin-top: 20px;
+    width: 1010px; /* Largeur de la zone contenant les carrés */
+    display: grid;
+    justify-content: center;
+    grid-template-columns: repeat(12, 70px); /* 12 colonnes de 60px chacune */
+    grid-gap: 15px; /* Espacement entre les carrés */
+}
+
+.square {
+    width: 60px;
+    height: 60px;
+    background-color: #ffffff; /* Carré blanc */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+    position: relative;
+    
+}
+
+.cube {
+    
+    width: 180px;
+    height: 180px;
+    position: relative;
+    transform-style: preserve-3d;
+    animation: roll-animation 2s forwards;
+    
+}
+
+.face {
+    border-radius: 30px;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, blue, white);
+    border: 1px solid black;
+    text-align: center;
+    font-size: 48px;
+    line-height: 180px;
+}
+
+.front { transform: translateZ(90px); }
+.back { transform: rotateY(180deg) translateZ(90px); }
+.left { transform: rotateY(-90deg) translateZ(90px); }
+.right { transform: rotateY(90deg) translateZ(90px); }
+.top { transform: rotateX(90deg) translateZ(90px); }
+.bottom { transform: rotateX(-90deg) translateZ(90px); }
+
+@keyframes roll-animation {
+    0% {
+        transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+    }
+    100% {
+        transform: rotateX(360deg) rotateY(360deg) rotateZ(360deg);
+    }
+}
+#message {
+font-weight: bold;
+position: absolute;
+bottom: 45%; /* Ajustez la distance du bas selon vos besoins */
+left: 45%; /* Place le message au centre horizontalement */
+transform: translateX(-50%); /* Centre le message horizontalement */
+}
+.brillant {
+    animation: shine 1s infinite alternate; /* Animation de brillance */
+}
+
+#quiz-section {
+    display: none;
+    /* Ajoutez d'autres styles de positionnement au besoin */
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+#svg-button-container, #success-dialogue-container {
+    display: none;
+    /* Ajoutez d'autres styles de positionnement au besoin */
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+#svg-button-container img, #success-dialogue-container img{
+    display: block;
+    margin: auto;
+    width: 70%;
+}
+.quiz-options {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.quiz-options label { 
+    cursor: pointer;
+    border: 0.5px solid; /* Ajout d'une bordure autour des options */
+    padding: 10px;
+    border-radius: 5px;
+}
+.quiz-options button, #svg-button-container button, #success-dialogue-container button{
+    background-color: blue;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 20px;
+    display: block; 
+    margin: 0 auto;
+}
+
+.quiz-options button:hover {
+    transform: scale(1.1);
+}
+
+.header {
+  width: 1010px; 
+  height: 25px;
+  display: block;
+  background-color: #f1f1f1;
+  padding: 10px;
+
+}
+
+.header a {
+  float: left;
+  color: black;
+  text-align: center;
+  padding: 5px 10px;
+  text-decoration: none;
+  font-size: 18px;
+  line-height: 25px;
+  border-radius: 4px;
+}
+
+.header a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.header a.active {
+  background-color: dodgerblue;
+  color: white;
+}
+
+.header-left {
+  float: left;
+}
+
+.header-left h3{
+  display: inline;
+}
+
+.header-right {
+  float: right;
+}
+
+.header h3{
+ margin: 10px;
+}
+

@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup_page</title>
+    <style>
+@import url('https://fonts.googleapis.com/css2?family=Londrina+Shadow&family=Silkscreen&display=swap'); /*font-family: 'Silkscreen', cursive;*/
+@import url('https://fonts.googleapis.com/css2?family=Abel&family=Londrina+Shadow&family=Silkscreen&display=swap'); /*font-family: 'Abel', sans-serif;*/
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Silkscreen', cursive;
+}
+.ecran {
+    width: 100%;
+    height: 100vh;
+    background-image: url("background.jpg");
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.carte {
+    width: 90%;
+    max-width: 440px;
+    color: aliceblue;
+    text-align: center;
+    padding: 50px 30px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    background:rgba(255, 255, 255, 0.2) ;
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+}
+.carte img{
+    margin-top: 20px;
+    width: 120px;
+    border-radius: 30%;
+}
+.carte h2 {
+    font-size: 50px;
+    font-weight: 600px;
+    margin-top: 5px;
+    text-shadow: 5px 0 0 rgb(105, 105, 248);
+}
+.carte p{
+    font-size: 20px;
+    margin: 10px;
+    max-width: 330px;
+}
+.carte .reseau img {
+    width: 40px;
+    border-radius: 50%;
+    margin: 10px 5px;
+    transition: background-color 0.5s;
+
+}
+.carte .reseau img:hover {
+    background-color: whitesmoke ;
+}
+.bouton {
+    text-decoration: none;
+    display: inline-block ;
+    font-size: 20px;
+    font-weight: 700;
+    background: white;
+    color:rgb(105, 105, 248) ;
+    padding: 10px 30px;
+    border-radius: 30px;
+    margin: 10px 0 10px;    
+}
+
+  form {
+    padding: 30px 40px 0 40px;
+    border-radius: 6px;
+  }
+  input {
+    border: 1px solid;
+    border-radius: 4px;
+    width: 93%;
+    padding: 3%;
+    margin-bottom: 20px;
+    &:focus {
+      background-color: @color-light-blue;
+      outline: 0;
+      border-color: #a1c7e8;
+    }
+  }
+
+  button {
+    background-color: #3ec967;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    border-radius: 20px;
+    border: 0;
+    color: White;
+    padding: 10px;
+    width:100%;
+  }
+
+  h2 {
+    color: #b027a1;
+    text-align: center;
+    font-size: 2em;
+  }
+
+  aside {
+    color: black;
+    margin: 10px -40px;
+    padding: 15px;
+    border-radius: 0px 0px 6px 6px;
+    text-align: center;
+    
+  }
+
+  .welcome-message {
+    color: white;
+    text-align: center;
+  }
+
+  .error {
+    padding: 20px;
+    margin-top: 20px;
+    text-align: center;
+    color: black;
+  }
+    </style>
+</head>
+<body>
+<signup-login></signup-login>
+<div class="ecran">
+  <div class="carte" data-tilt>
+    <img src="Logo.jpg"/>
+    <h2>Kirbeco</h2>
+    <div class="form">
+      <p class="welcome-message">
+        <a href="javascript://">Log out</a>
+      </p>
+      <form>
+        <h3>Sign Up</h3><br>
+        <input placeholder="email" />
+        <input placeholder="password" type="password"/>
+        <button>Sign Up</button>
+        <aside>Have an account?
+          <a href="javascript://">Log In</a>
+        </aside>
+      </form>
+    </div>
+    <div class="reseau">
+      <a href=""><img src="logoDiscord.jpg"/></a>
+    </div>
+  </div>
+</div>
+<script src="signup.js"></script>
+<script src="vanilla-tilt.js"></script>
+</body>
+</html>
+
+
